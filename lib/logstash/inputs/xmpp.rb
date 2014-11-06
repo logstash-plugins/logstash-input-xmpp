@@ -14,18 +14,18 @@ class LogStash::Inputs::Xmpp < LogStash::Inputs::Base
 
   default :codec, "plain"
 
-  # The user or resource ID, like foo@example.com.
+  # The user or resource ID, like `foo@example.com`.
   config :user, :validate => :string, :required => :true
 
   # The xmpp password for the user/identity.
   config :password, :validate => :password, :required => :true
 
   # if muc/multi-user-chat required, give the name of the room that
-  # you want to join: room@conference.domain/nick
+  # you want to join: `room@conference.domain/nick`
   config :rooms, :validate => :array
 
   # The xmpp server to connect to. This is optional. If you omit this setting,
-  # the host on the user/identity is used. (foo.com for user@foo.com)
+  # the host on the user/identity is used. (`foo.com` for `user@foo.com`)
   config :host, :validate => :string
 
   # Set to true to enable greater debugging in XMPP. Useful for debugging
