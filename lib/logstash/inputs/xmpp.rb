@@ -10,7 +10,6 @@ require "logstash/namespace"
 class LogStash::Inputs::Xmpp < LogStash::Inputs::Base
   
   config_name "xmpp"
-  milestone 2
 
   default :codec, "plain"
 
