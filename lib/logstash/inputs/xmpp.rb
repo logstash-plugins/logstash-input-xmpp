@@ -27,10 +27,6 @@ class LogStash::Inputs::Xmpp < LogStash::Inputs::Base
   # the host on the user/identity is used. (`foo.com` for `user@foo.com`)
   config :host, :validate => :string
 
-  # Set to true to enable greater debugging in XMPP. Useful for debugging
-  # network/authentication erros.
-  config :debug, :validate => :boolean, :default => false, :deprecated => "Use the logstash --debug flag for this instead."
-
   public
   def register
     require 'xmpp4r' # xmpp4r gem
