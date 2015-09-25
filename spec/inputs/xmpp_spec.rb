@@ -1,7 +1,7 @@
 # encoding: utf-8
 require "logstash/devutils/rspec/spec_helper"
 require 'logstash/inputs/xmpp'
-require 'support/xmpp4r_mocks.rb'
+require_relative '../support/xmpp4r_mocks.rb'
 
 describe LogStash::Inputs::Xmpp do
   let(:rooms) { ['logstash', 'kibana'] }
