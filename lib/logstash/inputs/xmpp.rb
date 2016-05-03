@@ -62,8 +62,8 @@ class LogStash::Inputs::Xmpp < LogStash::Inputs::Base
         muc.on_message do |time, from, body|
           @codec.decode(body) do |event|
             decorate(event)
-            event["room"] = room
-            event["from"] = from
+            event.set("room", room)
+            event.set("from", from)
             queue << event
           end
         end # @muc.on_message
@@ -80,7 +80,7 @@ class LogStash::Inputs::Xmpp < LogStash::Inputs::Base
           decorate(event)
           # Maybe "from" should just be a hash:
           # { "node" => ..., "domain" => ..., "resource" => ... }
-          event["from"] = "#{msg.from.node}@#{msg.from.domain}/#{msg.from.resource}"
+          event.set("from", "#{msg.from.node}@#{msg.from.domain}/#{msg.from.resource}")
           queue << event
         end
       end
