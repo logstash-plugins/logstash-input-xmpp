@@ -43,8 +43,8 @@ describe LogStash::Inputs::Xmpp do
     context "when using Client" do
       it 'pushes normal events into a queue' do
         event = queue.first
-        expect(event['message']).to eq(msg)
-        expect(event['from']).to eq('bar@domain.org/chat')
+        expect(event.get('message')).to eq(msg)
+        expect(event.get('from')).to eq('bar@domain.org/chat')
       end
     end
 
@@ -60,9 +60,9 @@ describe LogStash::Inputs::Xmpp do
       it 'pushes room events into a queue' do
         rooms.each do |room|
           event = queue.shift
-          expect(event['message']).to eq('Hello Foo')
-          expect(event['from']).to eq('bar')
-          expect(event['room']).to eq(room)
+          expect(event.get('message')).to eq('Hello Foo')
+          expect(event.get('from')).to eq('bar')
+          expect(event.get('room')).to eq(room)
         end
       end
     end
