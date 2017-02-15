@@ -3,7 +3,6 @@ require "logstash/inputs/base"
 require "logstash/namespace"
 
 require 'xmpp4r' # xmpp4r gem
-# load the MUC Client anyway, its mocked in testing
 require 'xmpp4r/muc/helper/simplemucclient'
 
 # This input allows you to receive events over XMPP/Jabber.

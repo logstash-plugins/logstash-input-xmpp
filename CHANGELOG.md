@@ -1,3 +1,6 @@
+## 3.1.2
+  - Docs: Fix doc generation issue by removing extraneous comment
+
 ## 3.1.1
   - Relax constraint on logstash-core-plugin-api to >= 1.60 <= 2.99
 
