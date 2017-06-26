@@ -1,3 +1,9 @@
+## 3.1.4
+  - make the input compatible with the xmpp output by relaxing the constraints on xmpp4r
+
+## 3.1.3
+  - mass update for doc changes
+
 ## 3.1.2
   - Docs: Fix doc generation issue by removing extraneous comment
 
