@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name            = 'logstash-input-xmpp'
-  s.version         = '3.1.3'
+  s.version         = '3.1.4'
   s.licenses        = ['Apache License (2.0)']
   s.summary         = "This input allows you to receive events over XMPP/Jabber."
   s.description     = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "logstash-core-plugin-api", ">= 1.60", "<= 2.99"
 
   s.add_runtime_dependency 'logstash-codec-plain'
-  s.add_runtime_dependency 'xmpp4r', ['0.5']
+  s.add_runtime_dependency 'xmpp4r', '~> 0.5.6'
 
   s.add_development_dependency 'logstash-devutils'
 end
