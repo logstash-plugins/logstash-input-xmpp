@@ -1,6 +1,6 @@
 # Logstash Plugin
 
-[![Travis Build Status](https://travis-ci.org/logstash-plugins/logstash-input-xmpp.svg)](https://travis-ci.org/logstash-plugins/logstash-input-xmpp)
+[![Travis Build Status](https://travis-ci.com/logstash-plugins/logstash-input-xmpp.svg)](https://travis-ci.com/logstash-plugins/logstash-input-xmpp)
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
